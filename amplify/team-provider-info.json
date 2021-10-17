@@ -10,6 +10,11 @@
       "StackName": "amplify-crud-dev-124522",
       "StackId": "arn:aws:cloudformation:us-east-1:959447156202:stack/amplify-crud-dev-124522/774999c0-2ea0-11ec-8e3d-0eea2070da07",
       "AmplifyAppId": "d22kwxbnszlawt"
+    },
+    "categories": {
+      "auth": {
+        "cruddb855551": {}
+      }
     }
   }
 }
