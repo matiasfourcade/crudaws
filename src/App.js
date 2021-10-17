@@ -2,7 +2,7 @@ import './App.css';
 import React, {useEffect, useState} from 'react';
 import Amplify, {API, graphqlOperation } from 'aws-amplify';
 import awsConfig from './aws-exports';
-import { AmplifyAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
+import { AmplifyAuthenticator, AmplifySignOut, withAuthenticator } from '@aws-amplify/ui-react';
 import { listLists } from './graphql/queries';
 
 Amplify.configure(awsConfig);
@@ -12,6 +12,7 @@ function App() {
   const [list, setList] = useState([]);
 
   const fetchList = async () => {
+    console.log("fetching");
       const { data } = await API.graphql(graphqlOperation(listLists));  
       setList(data.listLists.items);
       console.log(data);
